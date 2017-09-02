@@ -13,17 +13,11 @@
     <!-- <h1>{{greet("afternoon")}}</h1>
     <p>{{name}}</p>
     <p>Job: {{job}}</p> -->
-    <h1>Events</h1>
-    <button v-on:click="add">Add a year</button>
-    <button v-on:click="subtract">Subtract a year</button>
-    <button v-on:dblclick="addten">Add 10 Years</button>
-    <button v-on:dblclick="subtractten">Subtract 10 years</button>
-    <p>My age is {{age}}</p>
-
-    <div id="canvas" v-on:mousemove="updateXY">
-      {{x}},{{y}}
-    </div>
-    <a v-on:click.prevent="click" href="http://www.thenetninja.co.uk">Net Ninja</a>
+    <h1>Keyboard Event</h1>
+    <label for="">Name</label>
+    <input type="text" v-on:keyup.enter="logName">
+    <label for="">Age</label>
+    <input type="text" v-on:keyup.enter="logAge">
   </div>
 
 
