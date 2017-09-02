@@ -13,13 +13,17 @@
     <!-- <h1>{{greet("afternoon")}}</h1>
     <p>{{name}}</p>
     <p>Job: {{job}}</p> -->
-    <h1>Computed Properties</h1>
-    <button v-on:click="a++">Add to A</button>
-    <button v-on:click="b++">Add to B</button>
-    <p>{{a}}</p>
-    <p>{{b}}</p>
-    <p>Add A to age is {{addAgeA}}</p>
-    <p>Add B to age is {{addAgeB}}</p>
+    <h1>Dynamic CSS</h1>
+    <h1>Example 1</h1>
+    <div v-on:click="available=!available"v-bind:class="{available:available,nearby:nearby}">
+      <span>Ryu</span>
+    </div>
+    <h2>Example 2</h2>
+    <button v-on:click="nearby=!nearby">Toggle Nearby</button>
+    <button v-on:click="available=!available">Toggle available</button>
+    <div v-bind:class="computeCSS">
+      <span>Rye</span>
+    </div>
   </div>
 
 

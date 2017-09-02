@@ -1,10 +1,8 @@
 new Vue({
   el:"#vue-app",
   data:{
-    name:"",
-    age:20,
-    a:0,
-    b:0,
+    available:true,
+    nearby:true
   },
   methods:{
       logName:function(){
@@ -38,6 +36,13 @@ new Vue({
     addAgeB:function(){
       console.log("Add B");
       return this.age+this.b;
+    },
+
+    computeCSS:function(){
+      return {
+        available:this.available,
+        nearby:this.nearby
+      }
     }
   }
 });
