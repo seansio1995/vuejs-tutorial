@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lesson 1</title>
+  <title>Data Binding</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
   <div id="vue-app">
-    <h1>{{greet("afternoon")}}</h1>
+    <!-- <h1>{{greet("afternoon")}}</h1>
     <p>{{name}}</p>
-    <p>Job: {{job}}</p>
+    <p>Job: {{job}}</p> -->
+    <h1>Welcome</h1>
+    <a v-bind:href="website">Net Ninja</a>
+    <input type="text" v-bind:value="name">
+    <p v-html="websiteTag"></p>
   </div>
 <script src="app.js"></script>
 </body>
