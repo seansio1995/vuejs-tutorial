@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Data Binding</title>
+  <title>Computed Properties</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/vue"></script>
 </head>
@@ -13,13 +13,13 @@
     <!-- <h1>{{greet("afternoon")}}</h1>
     <p>{{name}}</p>
     <p>Job: {{job}}</p> -->
-    <h1>Keyboard Event</h1>
-    <label for="">Name</label>
-    <input type="text" v-model="name">
-    <span>{{name}}</span>
-    <label for="">Age</label>
-    <input type="text" v-model="age">
-    <span>{{age}}</span>
+    <h1>Computed Properties</h1>
+    <button v-on:click="a++">Add to A</button>
+    <button v-on:click="b++">Add to B</button>
+    <p>{{a}}</p>
+    <p>{{b}}</p>
+    <p>Add A to age is {{addAgeA}}</p>
+    <p>Add B to age is {{addAgeB}}</p>
   </div>
 
 
