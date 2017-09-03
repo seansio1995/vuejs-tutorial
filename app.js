@@ -11,7 +11,9 @@ new Vue({
       {name:"Lily",age:22},
       {name:"Dick",age:100},
       {name:"Yoda",age:202}
-    ]
+    ],
+    health:100,
+    ended:false
   },
   methods:{
       logName:function(){
@@ -22,6 +24,17 @@ new Vue({
         console.log("You enter your age");
       },
 
+      punch:function(){
+        this.health-=10;
+        if (this.health <=0){
+          this.ended=true;
+        }
+      },
+
+      restart:function(){
+        this.health=100;
+        this.ended=false;
+      }
 
     // addAgeA:function(){
     //   console.log("Add A");

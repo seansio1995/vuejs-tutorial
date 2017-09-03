@@ -20,22 +20,14 @@
     <p v-if="success">It's successful!</p> -->
     <!-- <p v-show="error">There has been a error</p>
     <p v-show="success">It's successful!</p> -->
-    <ul>
-      <li v-for="character in characters">{{character}}</li>
-    </ul>
-    <ul>
-      <li v-for="(ninja,index) in ninjas">{{index}}: {{ninja.name}} -- {{ninja.age}}</li>
-    </ul>
-
-    <template v-for="(ninja,index) in ninjas">
-      <h3>{{ninja.index}} -- {{ninja.name}}</h3>
-      <p>{{ninja.age}}</p>
-    </template>
-    <template v-for="ninja in ninjas">
-      <div v-for="(val,key) in ninja">
-        <p>{{key}} -- {{val}}</p>
-      </div>
-    </template>
+    <div id="bag" v-bind:class="{burst:ended}"></div>
+    <div id="bag-health">
+      <div v-bind:style="{width:health+'%'}"></div>
+    </div>
+    <div id="game-control">
+      <button v-on:click="punch" v-show="!ended">Punch</button>
+      <button v-on:click="restart">Restart</button>
+    </div>
   </div>
 
 
