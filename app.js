@@ -2,7 +2,9 @@ new Vue({
   el:"#vue-app",
   data:{
     available:true,
-    nearby:true
+    nearby:true,
+    error:false,
+    success:false
   },
   methods:{
       logName:function(){
