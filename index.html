@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Computed Properties</title>
+  <title>For Loop</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/vue"></script>
 </head>
@@ -13,13 +13,29 @@
     <!-- <h1>{{greet("afternoon")}}</h1>
     <p>{{name}}</p>
     <p>Job: {{job}}</p> -->
-    <h1>Error or Success</h1>
+    <!-- <h1>For Loop</h1>
     <button v-on:click="error=!error">Toggle Error</button>
     <button v-on:click="success=!success">Toggle Success</button>
     <!-- <p v-if="error">There has been a error</p>
     <p v-if="success">It's successful!</p> -->
-    <p v-show="error">There has been a error</p>
-    <p v-show="success">It's successful!</p>
+    <!-- <p v-show="error">There has been a error</p>
+    <p v-show="success">It's successful!</p> -->
+    <ul>
+      <li v-for="character in characters">{{character}}</li>
+    </ul>
+    <ul>
+      <li v-for="(ninja,index) in ninjas">{{index}}: {{ninja.name}} -- {{ninja.age}}</li>
+    </ul>
+
+    <template v-for="(ninja,index) in ninjas">
+      <h3>{{ninja.index}} -- {{ninja.name}}</h3>
+      <p>{{ninja.age}}</p>
+    </template>
+    <template v-for="ninja in ninjas">
+      <div v-for="(val,key) in ninja">
+        <p>{{key}} -- {{val}}</p>
+      </div>
+    </template>
   </div>
 
 

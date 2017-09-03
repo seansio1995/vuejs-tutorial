@@ -4,7 +4,14 @@ new Vue({
     available:true,
     nearby:true,
     error:false,
-    success:false
+    success:false,
+    characters:["Jonny","Sean","Lena","Olivia","Tony","Zack"],
+    ninjas:[
+      {name: "Ryu",age:24},
+      {name:"Lily",age:22},
+      {name:"Dick",age:100},
+      {name:"Yoda",age:202}
+    ]
   },
   methods:{
       logName:function(){
