@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>For Loop</title>
+  <title>Multiple Instances</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-  <div id="vue-app">
+  <div id="vue-app-one">
     <!-- <h1>{{greet("afternoon")}}</h1>
     <p>{{name}}</p>
     <p>Job: {{job}}</p> -->
@@ -20,14 +20,14 @@
     <p v-if="success">It's successful!</p> -->
     <!-- <p v-show="error">There has been a error</p>
     <p v-show="success">It's successful!</p> -->
-    <div id="bag" v-bind:class="{burst:ended}"></div>
-    <div id="bag-health">
-      <div v-bind:style="{width:health+'%'}"></div>
-    </div>
-    <div id="game-control">
-      <button v-on:click="punch" v-show="!ended">Punch</button>
-      <button v-on:click="restart">Restart</button>
-    </div>
+  <h1>{{title}}</h1>
+  <p>{{greet}}</p>
+  </div>
+
+  <div id="vue-app-two">
+    <h1>{{title}}</h1>
+    <p>{{greet}}</p>
+    <button v-on:click="changeTitle">Change One's Title</button>
   </div>
 
 

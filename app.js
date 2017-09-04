@@ -68,3 +68,41 @@ new Vue({
     }
   }
 });
+
+
+var one=new Vue({
+  el:"#vue-app-one",
+  data:{
+    title:"This is Vue App One",
+  },
+
+  methods:{
+
+  },
+  computed:{
+    greet:function(){
+      return "Hello from Vue App One";
+    },
+  }
+});
+
+
+
+var two=new Vue({
+  el:"#vue-app-two",
+  data:{
+    title:"This is Vue App Two",
+  },
+
+  computed:{
+    greet:function(){
+      return "Hello from Vue App Two";
+    }
+
+  },
+  methods:{
+    changeTitle:function(){
+      one.title="Change One's Title";
+    }
+  }
+});
