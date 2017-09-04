@@ -1,108 +1,23 @@
-new Vue({
-  el:"#vue-app",
-  data:{
-    available:true,
-    nearby:true,
-    error:false,
-    success:false,
-    characters:["Jonny","Sean","Lena","Olivia","Tony","Zack"],
-    ninjas:[
-      {name: "Ryu",age:24},
-      {name:"Lily",age:22},
-      {name:"Dick",age:100},
-      {name:"Yoda",age:202}
-    ],
-    health:100,
-    ended:false
+Vue.component("greeting",{
+  template:"<p>Hello this is greeting from {{name}} <button v-on:click='changeName'>Change Name</button></p>",
+  data:function(){
+    return {
+      name:"Sean"
+    }
   },
   methods:{
-      logName:function(){
-        console.log("You enter your name");
-      },
-
-      logAge:function(){
-        console.log("You enter your age");
-      },
-
-      punch:function(){
-        this.health-=10;
-        if (this.health <=0){
-          this.ended=true;
-        }
-      },
-
-      restart:function(){
-        this.health=100;
-        this.ended=false;
-      }
-
-    // addAgeA:function(){
-    //   console.log("Add A");
-    //   return this.age+this.a;
-    // },
-    //
-    //
-    // addAgeB:function(){
-    //   console.log("Add B");
-    //   return this.age+this.b;
-    // }
+    changeName:function(){
+    this.name="Mario";
   },
-
-  computed:{
-    addAgeA:function(){
-      console.log("Add A");
-      return this.age+this.a;
-    },
-
-
-    addAgeB:function(){
-      console.log("Add B");
-      return this.age+this.b;
-    },
-
-    computeCSS:function(){
-      return {
-        available:this.available,
-        nearby:this.nearby
-      }
-    }
-  }
+}
 });
 
 
 var one=new Vue({
   el:"#vue-app-one",
-  data:{
-    title:"This is Vue App One",
-  },
-
-  methods:{
-
-  },
-  computed:{
-    greet:function(){
-      return "Hello from Vue App One";
-    },
-  }
 });
-
 
 
 var two=new Vue({
   el:"#vue-app-two",
-  data:{
-    title:"This is Vue App Two",
-  },
-
-  computed:{
-    greet:function(){
-      return "Hello from Vue App Two";
-    }
-
-  },
-  methods:{
-    changeTitle:function(){
-      one.title="Change One's Title";
-    }
-  }
 });
